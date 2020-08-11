@@ -10,6 +10,7 @@
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+  {{ 'fontawesome.css' | asset_url | stylesheet_tag }}
   {{ 'style.css' | asset_url | stylesheet_tag }}
 </head>
 <body>
@@ -28,7 +29,7 @@
     {% endif %}
   {% endfor %}
 
-  <a href="/cart">cart</a>
+  <a href="/cart"> <i class="fa fa-home"></i> cart</a>
 
   {% if shop.customer_accounts_enabled %}
     {% if customer %}
@@ -43,6 +44,6 @@
   <main role="main">
     {{ content_for_layout }}
   </main>
-  {{ 'bootstrap.min.js' | asset_url | script_tag }}
+  <!--{{ 'bootstrap.min.js' | asset_url | script_tag }} -->
 </body>
 </html>
