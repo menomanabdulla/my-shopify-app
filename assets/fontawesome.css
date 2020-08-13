@@ -4555,44 +4555,50 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(' {{ 'fabrands400.eot' | asset_url }} ');
-  src: url(' {{ 'fabrands400.eot?#iefix' | asset_url }}') format("embedded-opentype"),
-    url(' {{ 'fabrands400.woff2' | asset_url }}') format("woff2"),
-    url(' {{ 'fabrands400.woff' | asset_url }}') format("woff"),
-    url('{{ 'fabrands400.ttf' | asset_url }}') format("truetype"),
-    url('{{ 'fabrands400.svg#fontawesome' | asset_url }}') format("svg"); }
+  src: url(fabrands400.eot);
+  src: url(fabrands400.eot?#iefix) format("embedded-opentype"),
+    url(fabrands400.woff2) format("woff2"),
+    url(fabrands400.woff) format("woff"),
+    url(fabrands400.ttf) format("truetype"),
+    url(fabrands400.svg#fontawesome) format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
+
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url('{{ 'faregular400.eot' | asset_url }}');
-  src: url('{{ 'faregular400.eot?#iefix' | asset_url }}') format("embedded-opentype"),
-  url('{{ 'faregular400.woff2' | asset_url }}') format("woff2"),
-  url('{{ 'faregular400.woff' | asset_url }}') format("woff"), 
-  url('{{ 'faregular400.ttf' | asset_url }}') format("truetype"), 
-  url('{{ 'faregular400.svg#fontawesome' | asset_url }}') format("svg"); }
+  src: url(faregular400.eot);
+  src: url(faregular400.eot?#iefix) format("embedded-opentype"),
+  url(faregular400.woff2) format("woff2"),
+  url(faregular400.woff) format("woff"), 
+  url(faregular400.ttf) format("truetype"), 
+  url(faregular400.svg#fontawesome) format("svg"); 
+
+}
 
 .far {
   font-family: 'Font Awesome 5 Free';
-  font-weight: 400; }
+  font-weight: 400; 
+}
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url('{{ 'fasolid900.eot' | asset_url }}');
-  src: url('{{ 'fasolid900.eot?#iefix' | asset_url }}') format("embedded-opentype"), 
-    url('{{ 'fasolid900.woff2' | asset_url }}') format("woff2"), 
-    url('{{ 'fasolid900.woff' | asset_url }}') format("woff"), 
-    url('{{ 'fasolid900.ttf' | asset_url }}') format("truetype"), 
-    url('{{ 'fasolid900.svg#fontawesome' | asset_url }}') format("svg"); }
+  src: url(fasolid900.eot);
+  src: url(fasolid900.eot?#iefix) format("embedded-opentype"), 
+    url(fasolid900.woff2) format("woff2"), 
+    url(fasolid900.woff) format("woff"), 
+    url(fasolid900.ttf) format("truetype"), 
+    url(fasolid900.svg#fontawesome) format("svg"); 
+}
 
 .fa,
 .fas {
   font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
+  font-weight: 900; 
+}
