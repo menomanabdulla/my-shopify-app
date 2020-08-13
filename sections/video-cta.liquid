@@ -1,0 +1,98 @@
+
+
+<div class="video-cta">
+    <div class="row">
+        <div class="col">
+            <div class="left-v-cta-content">
+                <div class="cta-content-bg">
+
+                </div>
+                <div class="cta-content-text">
+                    <h2>
+                        {{section.settings.title}}
+                    </h2>
+                    {{section.settings.content}}
+                    {% if section.settings.link != blank %}
+                    <a href="{{section.settings.link}}">
+                        <i class="fa fa-angle-double-right"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col my-auto">
+            <div class="cta-right-video">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/{{section.settings.video_url}}?rel=0"
+                     class="embed-responsive-item" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+                <h3>
+                    {{section.settings.video_title}}
+                </h3>
+                {{section.settings.video_desc}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name":{
+            "en": "Video CTA"
+        },
+        "settings":[
+            {
+                "type": "text",
+                "id": "title",
+                "label":{
+                    "en": "Title"
+                },
+                "default": "Spring Girls"
+            },
+            {
+                "type": "textarea",
+                "id": "content",
+                "label":{
+                    "en": "content"
+                },
+                "default": "Girl Lookbook 2015"
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label":{
+                    "en": "Link"
+                }
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label":{
+                    "en": "Image"
+                }
+            },
+            {
+                "type": "video_url",
+                "id": "video_link",
+                "label":{
+                     "en": "Video URL"
+                 }
+            },
+            {
+                "type": "text",
+                "id": "video_title",
+                "label":{
+                     "en": "Video Title"
+                 }
+            },
+              {
+                "type": "textarea",
+                "id": "video_desc",
+                "label":{
+                     "en": "Video Description"
+                 }
+            }
+        ]
+    }
+{% endschema %}
