@@ -1,7 +1,17 @@
 <header id="site-header" class="site-header">
     <div class="container">
         <div class="row">
-            <div class="col col-auto">
+            <div class="col">
+                <i class="fa fa-start"></i>  
+                Welcome to 1992 Online shop! Let's start to Shopping nomw!!!  
+            </div>
+            <div class="col col-auto user-menu">
+                <a href="">Sign Up</a>
+                <a href="">Login</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
                 <div class="logo">
                     <a href="/" class="site-logo">
                         <h2>
@@ -13,6 +23,35 @@
                         </h2>
                     </a>
                 </div>
+            </div>
+            <div class="col">
+                <div class="mainmenu">
+                    <ul id="nav">
+                        {% for link in linklists.main-menu.links %}
+                            {% assign child_list_handle = link.title | handleize %}
+                            {% if linklists[child_list_handle].links != blank %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            <ul>
+                                {% for childlink in linklists[child_list_handle].links %}
+                                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="col-lg-2 text-right">
+                <span class="search-trigger"><i class="fa fa-search"> </i></span>
+                <a href="/cart" class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-count">
+                        {{ cart.item_count }}
+                    </span>
+                </a>
             </div>
         </div>
     </div>
