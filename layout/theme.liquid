@@ -15,24 +15,21 @@
   {{ 'style.css' | asset_url | stylesheet_tag }}
 </head>
 <body>
-
-  {% section 'header' %}
-
-  <a href="/cart"> <i class="fa fa-home"></i> cart</a>
-
-  {% if shop.customer_accounts_enabled %}
-    {% if customer %}
-      <a href="/account">account</a>
-      {{ 'log out'  | customer_logout_link }}
-    {% else %}
-      {{ 'log in ' | customer_login_link }}
-      {{ 'register' | customer_register_link }}
-    {% endif %}
-  {% endif %}
-
-  <main role="main">
-    {{ content_for_layout }}
-  </main>
-  <!--{{ 'bootstrap.min.js' | asset_url | script_tag }} -->
+  <div class="site-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="site-inner">
+            {% section 'header' %}
+            <main role="main">
+              {{ content_for_layout }}
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- <a href="/cart"> <i class="fa fa-home"></i> cart</a>
+  {{ 'bootstrap.min.js' | asset_url | script_tag }} -->
 </body>
 </html>

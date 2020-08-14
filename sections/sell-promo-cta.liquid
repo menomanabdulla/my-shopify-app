@@ -1,0 +1,64 @@
+
+
+<div class="sell-promo-cta">
+    <div class="row">
+        <div class="col">
+            {% if section.settings.image != blank %}
+                <div class="sell-promo-thumb">
+                    <img src="{{section.settings.image}}" alt="">
+                </div>
+            {% endif %}
+            <h2>
+                {{section.settings.title}}
+            </h2>
+            {{section.settings.content}}
+            {% if section.settings.link != blank %}
+                <a href="{{section.settings.link}}">
+                    <i class="fa fa-angle-double-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+
+    {
+        "name":{
+            "en": "Sell Promo CTA"
+        },
+        "settings":[
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label":{
+                    "en": "Image"
+                }
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label":{
+                    "en": "Title"
+                },
+                "default": "Sall End Seasion"
+            },
+            {
+                "type": "textarea",
+                "id": "content",
+                "label":{
+                    "en": "content"
+                }
+            },
+            {
+                "type": "url",
+                "id": "link",
+                "label":{
+                    "en": "Link"
+                }
+            }
+        ]
+    }
+
+{% endschema %}

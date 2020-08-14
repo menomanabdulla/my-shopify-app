@@ -5,7 +5,7 @@
         <div class="col">
             <div class="left-v-cta-content">
                 <div class="cta-content-bg">
-
+                    <img src="{{section.settings.image | img_url: '400x400'}}" alt="" />
                 </div>
                 <div class="cta-content-text">
                     <h2>
@@ -23,7 +23,7 @@
         <div class="col my-auto">
             <div class="cta-right-video">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/{{section.settings.video_url}}?rel=0"
+                    <iframe src="https://www.youtube.com/embed/{{section.settings.video_id}}?rel=0"
                      class="embed-responsive-item" frameborder="0" allowfullscreen=""></iframe>
                 </div>
                 <h3>
@@ -73,11 +73,11 @@
                 }
             },
             {
-                "type": "video_url",
-                "id": "video_link",
+                "type": "text",
+                "id": "video_id",
                 "label":{
                      "en": "Video URL"
-                 }
+                }
             },
             {
                 "type": "text",
@@ -93,6 +93,20 @@
                      "en": "Video Description"
                  }
             }
+        ],
+        "presets":[
+            {
+                "name":{
+                    "en": "Video CTA"
+                },
+                "category":{
+                    "en": "Home"
+                },
+                "settings":{
+                    "title": "Spring Girls"
+                }
+            }
         ]
+        
     }
 {% endschema %}
